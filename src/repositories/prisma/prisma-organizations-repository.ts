@@ -28,7 +28,7 @@ export class PrismaOrganizationsRepository implements IOrganizationsRepository {
 
   async findManyNearby({ latitude, longitude }: FindManyNearbyParams) {
     const organizations = prisma.$queryRaw<Organization[]>`
-      SELECT * from gyms
+      SELECT * from organizations
       WHERE (6371 * acos(cos(radians(${latitude})) * cos(radians(latitude)) * cos(radians(longitude) - radians(${longitude})) + sin( radians(${latitude})) * sin(radians(latitude)))) <= 10
     `
 
