@@ -1,4 +1,4 @@
-export class PetNotFoundError extends Error {
+export class OrgNotFoundError extends Error {
   constructor() {
     super('Organization not found.')
   }

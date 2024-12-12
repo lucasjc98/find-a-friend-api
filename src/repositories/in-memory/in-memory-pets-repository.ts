@@ -45,7 +45,6 @@ export class InMemoryPetsRepository implements IPetsRepository {
       id: randomUUID(),
       ...data,
       created_at: new Date(),
-      organization_id: 'org-01',
     }
 
     this.items.push(pet)
