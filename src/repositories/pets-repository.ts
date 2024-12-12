@@ -11,5 +11,5 @@ export interface FindAllParams {
 export interface IPetsRepository {
   findById(id: string): Promise<Pet | null>
   findAll(params: FindAllParams, page: number): Promise<Pet[]>
-  create(data: Prisma.PetCreateInput): Promise<Pet>
+  create(data: Prisma.PetUncheckedCreateInput): Promise<Pet>
 }
